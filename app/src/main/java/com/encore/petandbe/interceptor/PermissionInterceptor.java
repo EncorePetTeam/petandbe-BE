@@ -28,6 +28,7 @@ public class PermissionInterceptor implements HandlerInterceptor {
 	private static final String SWAGGER_OPEN_API = "/docs/open-api-3.0.1.json";
 	private static final String SWAGGER_FAVICON_16 = "/docs/favicon-16x16.png";
 	private static final String SWAGGER_FAVICON_32 = "/docs/favicon-32x32.png";
+	private static final String FAVICON_ICO = "/favicon.ico";
 
 	private static final String ERROR = "/error";
 
@@ -77,7 +78,8 @@ public class PermissionInterceptor implements HandlerInterceptor {
 		return request.getRequestURI().equals(SWAGGER_URI) || request.getRequestURI().equals(SWAGGER_PRESET_URI)
 			|| request.getRequestURI().equals(SWAGGER_BUNDLE_URI) || request.getRequestURI().equals(SWAGGER_CSS_URI)
 			|| request.getRequestURI().equals(ERROR) || request.getRequestURI().equals(SWAGGER_FAVICON_16)
-			|| request.getRequestURI().equals(SWAGGER_FAVICON_32) || request.getRequestURI().equals(SWAGGER_OPEN_API);
+			|| request.getRequestURI().equals(SWAGGER_FAVICON_32) || request.getRequestURI().equals(SWAGGER_OPEN_API)
+			|| request.getRequestURI().equals(FAVICON_ICO);
 	}
 
 	private boolean checkHandlerMethod(Object handler) {

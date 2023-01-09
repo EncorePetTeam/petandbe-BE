@@ -22,7 +22,7 @@ public class AppConfig implements WebMvcConfigurer {
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/swagger/**")
-			.addResourceLocations("classpath:/static/swagger/");
+		registry.addResourceHandler("/docs/**")
+			.addResourceLocations("classpath:/static/docs/");
 	}
 }
